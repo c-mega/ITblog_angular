@@ -1,9 +1,20 @@
+<select class="form-control">
+    <option value="selecciona">Filtrar por categoría</option>
+    <option value="cibersecurity">Cibersecurity</option>
+    <option value="developers">Full Stack Development</option>
+    <option value="datascience">Data Science</option>
+    <option value="cloud">Cloud Architecture</option>
+    <option value="ux">UX Design</option>
+</select>
+
+
 <div class="posts">
     <div class="post" *ngFor="let post of posts">
         <h3>{{post.titulo}} {{post.autor}} {{post.fecha}}</h3>
         <h1>{{post.categoria}}</h1>
         <img [src]="post.imagen" alt="">
         <p>{{post.texto}}</p>
+    </div>
+</div>
 
-
-        <!--MAQUETAR Y COMPLETAR ESTE Y EL CSS -->
+<!--MAQUETAR Y COMPLETAR ESTE Y EL CSS -->

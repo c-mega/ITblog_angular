@@ -14,12 +14,11 @@ export class BlogComponent implements OnInit {
 
   constructor(private appService: AppService) { }
 
-  ngOnInit(): void {
+  async ngOnInit() {
 
-    this.appService.getAllPosts()
-      .then(arrPos => {
-        this.posts = arrPos;
-      }).catch(err => console.log(err));
+    this.posts = await this.appService.getAllPosts();
+    console.log(this.appService.getAllPosts());
+
   }
 
 }
