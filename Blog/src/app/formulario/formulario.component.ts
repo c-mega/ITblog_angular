@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
+import { AppService } from '../app.service';
 
 @Component({
   selector: 'app-formulario',
@@ -7,9 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormularioComponent implements OnInit {
 
-  constructor() { }
+  formulario: FormGroup;
+
+  constructor(private appService: AppService) {
+    this.formulario = new FormGroup({
+      titulo: new FormControl(),
+      autor: new FormControl(),
+      texto: new FormControl(),
+      imagen: new FormControl(),
+      fecha: new FormControl(),
+      categoria: new FormControl(),
+    }
+    );
+  }
 
   ngOnInit(): void {
   }
 
+  async onSubmit() {
+    console.log(this.formulario.value);
+    const response = await this.appService.agregarPost();
+    console.log(response);
+  }
 }

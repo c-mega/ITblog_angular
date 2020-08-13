@@ -1,1 +1,47 @@
-<p>formulario works!</p>
+{{formulario.value | json}}
+
+<form class="container mt-5" [formGroup]="formulario" (ngSubmit)="onSubmit()" novalidate>
+    <div class="row">
+        <div class="col">
+            <label>Título</label>
+            <input type="text" class="form-control" placeholder="titulo" formControlName="titulo">
+        </div>
+        <div class="col">
+            <label>Autor</label>
+            <input type="text" class="form-control" placeholder="autor" formControlName="autor">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="row mb-3">
+            <label for="validationTextarea">Contenido:</label>
+            <textarea class="form-control" placeholder="Inserte contenido de su post" rows="20" cols="100" required
+                formControlName="texto"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputAddress">Inserte URL de la imagen</label>
+        <input type="text" class="form-control" formControlName="imagen">
+    </div>
+
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Fecha</label>
+        <input type="date" value="2020-08-17" min="2000-01-01" max="2020-08-17" formControlName="fecha">
+    </div>
+
+    <div class="form-group">
+        <select class="form-control" formControlName="categoria">
+            <option value="selecciona">Selecciona una categoría</option>
+            <option value="cibersecurity">Cibersecurity</option>
+            <option value="developers">Full Stack Development</option>
+            <option value="datascience">Data Science</option>
+            <option value="cloud">Cloud Architecture</option>
+            <option value="ux">UX Design</option>
+        </select>
+    </div>
+
+
+    <button type="submit" value="enviar" [disabled]="!formulario.valid" class="btn btn-primary mb-2 margin-auto">Agregar
+        Post</button>
+    <!-- lo de disables es para deshabilitar el botón si el user no rellena bien el formulario -->
+</form>

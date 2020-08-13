@@ -9,36 +9,26 @@ export class AppService {
   arrPosts: Post[];
 
   constructor() {
-    this.arrPosts = [];
+    this.arrPosts = [
+
+    ];
   }
 
-  agregarPost() { //este es un método de formularioComponent
-
+  agregarPost() {
+    console.log(this.arrPosts.push());
   }
 
-  getAllPosts(): Post[] {
-    return this.arrPosts;
-  }
-
-  getAllPostsPromise(): Promise<Post[]> { //cuando la promesa se resuelva devolverá un arr de posts
+  getAllPosts(): Promise<Post[]> {
     return new Promise((resolve, reject) => {
       resolve(this.arrPosts);
     });
-
-
-
-
   }
 
-  getPostsByCategoria(): Promise<Post[]> { //Este es un método de blogComponent
+  getPostByCategoria(pCategoria): Promise<Post[]> {
     return new Promise((resolve, reject) => {
-      let arrFiltrado = this.arrPosts.filter(cat => {
-        return cat.categoria;
-      });
-      resolve(arrFiltrado)
+      resolve(this.arrPosts.filter(publicacion => {
+        return publicacion.categoria === pCategoria;
+      }));
     });
   }
-
 }
-
-
