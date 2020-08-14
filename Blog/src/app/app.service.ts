@@ -32,8 +32,11 @@ export class AppService {
     ];
   }
 
-  agregarPost() {
-    this.arrPosts.push();
+  agregarPost(Post): Promise<string> {
+    return new Promise<string>((resolve, reject) => {
+      this.arrPosts.push(Post);
+      resolve('Este post se ha agregado correctamente');
+    });
   }
 
   getAllPosts(): Promise<Post[]> {
