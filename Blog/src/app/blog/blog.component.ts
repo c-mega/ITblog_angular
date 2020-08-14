@@ -21,5 +21,15 @@ export class BlogComponent implements OnInit {
 
   }
 
+  async onChange($event) {
+    if ($event.target.value === 'selecciona') {
+      this.posts = await this.appService.getAllPosts();
+    } else {
+      this.posts = await this.appService.getPostByCategoria($event.target.value);
+    }
+  }
+
+
+
 }
 
