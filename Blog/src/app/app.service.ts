@@ -37,6 +37,7 @@ export class AppService {
       this.arrPosts.push(Post);
       resolve('Este post se ha agregado correctamente');
     });
+
   }
 
   getAllPosts(): Promise<Post[]> {
