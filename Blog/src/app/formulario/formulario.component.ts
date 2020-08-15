@@ -32,5 +32,6 @@ export class FormularioComponent implements OnInit {
     const response = await this.appService.agregarPost(this.formulario.value);
     console.log(response);
     this.router.navigate(['/blog']);
+
   }
 }

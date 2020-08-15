@@ -9,7 +9,10 @@ export class AppService {
   arrPosts: Post[];
 
   constructor() {
+
+
     this.arrPosts = [
+
 
       {
         titulo: 'Full Stack, Front End, Back End—What Does it All Mean?',
@@ -36,7 +39,9 @@ export class AppService {
     return new Promise<string>((resolve, reject) => {
       this.arrPosts.push(Post);
       resolve('Este post se ha agregado correctamente');
+      /* localStorage.setItem(Post, '');  */
     });
+
 
   }
 
