@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { BlogComponent } from './blog/blog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DetalleComponent } from './detalle/detalle.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormularioComponent,
-    BlogComponent
+    BlogComponent,
+    DetalleComponent
   ],
   imports: [
     BrowserModule,

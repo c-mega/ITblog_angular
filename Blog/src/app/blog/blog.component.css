@@ -1,0 +1,36 @@
+
+h1 {
+    font-family: oswald;
+    font-size: 80px;
+    background-color: crimson;
+    text-align: center;
+    color: whitesmoke;
+}
+.inform {
+    background-color: lightgray;
+}
+
+.info {
+    font-size: 30px;
+    font-family: open sans condensed;
+}
+
+.posts {
+    display: flex;
+    flex-direction: nowrap;
+    padding: 20px;
+    margin: 20px;
+    font-family: open sans condensed;
+    font-size: 25px;
+}
+
+h3{
+    font-family:oswald;
+    font-size: 20px;
+}
+
+button {
+    font-family: Oswald; 
+    font-size: 30px;
+    align-items: center;
+}

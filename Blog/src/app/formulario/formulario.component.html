@@ -1,6 +1,7 @@
-{{formulario.value | json}}
+<!-- {{formulario.value | json}} Para visualizar que se ve bien-->
 
-<form class="container mt-5" [formGroup]="formulario" (ngSubmit)="onSubmit()" novalidate>
+<h1>THE INTUITIVE BLOG</h1>
+<form class="container mt-1" [formGroup]="formulario" (ngSubmit)="onSubmit()" novalidate>
     <div class="row">
         <div class="col">
             <label>Título</label>
@@ -15,7 +16,7 @@
     <div class="form-group">
         <div class="row mb-3">
             <label for="validationTextarea">Contenido:</label>
-            <textarea class="form-control" placeholder="Inserte contenido de su post" rows="20" cols="100" required
+            <textarea class="form-control" placeholder="Inserte contenido de su post" rows="10" cols="60" required
                 formControlName="texto"></textarea>
         </div>
     </div>
