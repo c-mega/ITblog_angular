@@ -18,7 +18,7 @@ export class BlogComponent implements OnInit {
   async ngOnInit() {
 
     this.posts = await this.appService.getAllPosts();
-    console.log(this.appService.getAllPosts());
+    /* console.log(this.appService.getAllPosts()); */
 
   }
 
