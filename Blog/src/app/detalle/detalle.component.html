@@ -1,6 +1,48 @@
-<p>Detalle works!</p>
+<header>
+    <div class="row">
+        <div class="col-12">
+            <h1>THE INTUITIVE BLOG</h1>
+        </div>
+    </div>
 
-<h3>{{post.titulo}} {{post.autor}} {{post.fecha}}</h3>
-<h1>{{post.categoria}}</h1>
-<img [src]="post.imagen" alt="">
-<p>{{post.texto}}</p>
+</header>
+
+<div class="container">
+    <div class="row titulo">
+        <div class="col-12">
+            <h2>{{post?.titulo}}</h2>
+        </div>
+    </div>
+
+
+    <div class="row cuerpo">
+        <div class="col-12 col-lg-4">
+            <img [src]="post?.imagen" alt="">
+        </div>
+        <div class="col-12 col-lg-8 texto">
+            <p>{{post?.texto}}</p>
+        </div>
+    </div>
+
+    <div class="row pie">
+        <div class="col-12 col-lg-4">
+            <p> Autor: <p>{{post?.autor}} </p>
+        </div>
+        <div class="col-12 col-lg-4">
+            <p> Fecha: <p>{{post?.fecha}} </p>
+        </div>
+        <div class="col-12 col-lg-4">
+            <p> Categoría: <p> {{post?.categoria}} </p>
+        </div>
+    </div>
+</div>
+
+<footer class="bg-secondary container-fluid py-3 fixed-bottom">
+    <div class="row">
+        <div class="col-12 button">
+            <div>
+                <a href="http://localhost:4200/blog" class="btn btn-warning btn-lg">Volver a la página principal</a>
+            </div>
+        </div>
+    </div>
+</footer>

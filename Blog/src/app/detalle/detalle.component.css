@@ -1,0 +1,57 @@
+h1 {
+    font-family: oswald;
+    font-size: 80px;
+    background-color: crimson;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.container {
+text-align: center;
+}
+
+h2 {
+    font-family: oswald; 
+    font-size: 50px;
+}
+
+.cuerpo {
+    border: 3px solid crimson;
+    font-family: open sans condensed;
+    font-size: 20px;
+    margin: 2px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    align-items: center;
+}
+
+.texto {
+    text-align: justify;
+}
+
+row .pie {
+    font-family: oswald;
+    font-size: 40px;
+}
+
+.pie p {
+    font-family: open sans condensed;
+    font-size: 25px;
+}
+.button {
+    text-align: center;
+    color: white;
+    margin: 0 auto;
+    font-family:oswald;
+    
+}
+
+.button a {
+    font-size: 30px;
+    border-radius: 40%;
+}
+

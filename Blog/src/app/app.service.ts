@@ -9,11 +9,13 @@ export class AppService {
 
   arrPosts: Post[];
 
-  constructor() { }
+  constructor() {
+
+  }
 
   agregarPost(Post): Promise<string> {
     return new Promise<string>((resolve, reject) => {
-      this.arrPosts.push(Post);
+      POSTS.push(Post);
       resolve('Este post se ha agregado correctamente');
 
     });
@@ -37,8 +39,8 @@ export class AppService {
 
   getById(pId): Promise<Post> { //para recuperar al post por su id
     return new Promise((resolve, reject) => {
-      let post = POSTS.find(p => {
-        return p.id === parseInt(pId);
+      let post = POSTS.find(post => {
+        return post.id == pId;
       });
       resolve(post);
     });

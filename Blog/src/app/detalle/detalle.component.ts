@@ -17,7 +17,7 @@ export class DetalleComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(async params => {
-      this.post = await this.appService.getById(params.postId);
+      this.post = await this.appService.getById(params.blogId);
     });
   }
 

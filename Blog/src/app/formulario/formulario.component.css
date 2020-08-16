@@ -18,3 +18,14 @@ div textarea {
     font-size: 20px;
 }
 
+.button  {
+    text-align: center;
+    
+    margin: 0 auto;
+    font-family:oswald;
+    border-radius: 40%;
+}
+button {
+    border-radius: 40%;
+    font-size: 30px;
+}

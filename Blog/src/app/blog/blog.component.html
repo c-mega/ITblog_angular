@@ -18,61 +18,51 @@
                     Bienvenid@ a "The Intuitive Blog", el blog donde encontrarás todo tipo de actualizaciones de las
                     profesiones tecnológicas más demandadas del momento. Despliega el menú y conoce todos los secretos
                     de la
-                    tecnología
+                    tecnología!
                 </div>
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-12">
 
                         <select class="form-control" (change)="onChange($event)">
                             <option value="selecciona">Filtrar por categoría</option>
-                            <option value="cibersecurity">Cibersecurity</option>
-                            <option value="developers">Full Stack Development</option>
-                            <option value="datascience">Data Science</option>
-                            <option value="cloud">Cloud Architecture</option>
-                            <option value="ux">UX Design</option>
+                            <option value="Cibersecurity">Cibersecurity</option>
+                            <option value="Developers">Full Stack Development</option>
+                            <option value="Data Science">Data Science</option>
+                            <option value="Cloud">Cloud Architecture</option>
+                            <option value="UX-UI">UX Design</option>
                         </select>
                     </div>
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-12">
-                    <div class="posts">
-                        <div class="post" *ngFor="let post of posts" [routerLink]="['/blog', post.id]">
-                            <div class="col-md-4">
-                                <div class="card mb-6 shadow-sm">
-                                    <div class="card" style="width: 15rem;">
-                                        <img class="card-img-top" [src]="post.imagen" alt="">
-                                        <div class="card-body">
-                                            <h3 class="card-title">{{post.titulo}}</h3>
-                                            <p>{{post.fecha}}</p>
-                                            <!--   <p class="card-text">{{post.texto}}</p> -->
-                                            <p>{{post.autor}}</p>
-                                            <a class="btn btn-primary">Leer más</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+
+            <div class="container">
+                <div class="posts row">
+                    <div class="card mb-6 shadow-sm col-12 col-lg-4" *ngFor="let post of posts"
+                        [routerLink]="['/blog', post.id]">
+
+                        <img class="card-img-top" [src]="post.imagen" alt="">
+                        <div class="card-body">
+                            <h3 class="card-title">{{post.titulo}}</h3>
+                            <p>{{post.fecha}}</p>
+                            <p>{{post.autor}}</p>
+                            <a class="btn btn-warning">Leer más</a>
                         </div>
+
                     </div>
+
                 </div>
             </div>
+
         </div>
 
 
-        <!--  <div class="posts">
-        <div class="post" *ngFor="let post of posts" [routerLink]="['/blog', post.id]">
-            <h3>{{post.titulo}} {{post.autor}} {{post.fecha}}</h3>
-            <h1>{{post.categoria}}</h1>
-            <img [src]="post.imagen" alt="">
-            <p>{{post.texto}}</p>
-        </div>
-        </div> -->
-        <footer class="bg-dark container-fluid py-3 fixed-bottom">
+
+        <footer class="bg-secondary container-fluid py-3 fixed-bottom">
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 button">
                     <div>
-                        <a href="http://localhost:4200/new" class="btn btn-success btn-lg">Crear un nuevo post</a>
+                        <a href="http://localhost:4200/new" class="btn btn-warning btn-lg">Crear un nuevo post</a>
                     </div>
                 </div>
             </div>

@@ -42,7 +42,18 @@
     </div>
 
 
-    <button type="submit" value="enviar" [disabled]="!formulario.valid" class="btn btn-primary mb-2 margin-auto">Agregar
-        Post</button>
+
+    <div class="row">
+        <div class="col-12 button">
+            <div>
+                <button type="submit" value="enviar" [disabled]="!formulario.valid"
+                    class="btn btn-warning btn-lg">Agregar
+                    Post</button>
+            </div>
+        </div>
+    </div>
+
+
+
     <!-- lo de disables es para deshabilitar el botón si el user no rellena bien el formulario -->
 </form>
