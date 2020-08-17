@@ -15,8 +15,10 @@ export class AppService {
 
   agregarPost(Post): Promise<string> {
     return new Promise<string>((resolve, reject) => {
+      Post.id = POSTS.length + 1;
       POSTS.push(Post);
       resolve('Este post se ha agregado correctamente');
+
 
     });
 
