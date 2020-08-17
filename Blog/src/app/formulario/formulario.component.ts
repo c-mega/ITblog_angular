@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AppService } from '../app.service';
 import { Router } from '@angular/router';
 
@@ -14,12 +14,12 @@ export class FormularioComponent implements OnInit {
 
   constructor(private appService: AppService, private router: Router) {
     this.formulario = new FormGroup({
-      titulo: new FormControl(),
-      autor: new FormControl(),
-      texto: new FormControl(),
-      imagen: new FormControl(),
-      fecha: new FormControl(),
-      categoria: new FormControl(),
+      titulo: new FormControl('', Validators.required),
+      autor: new FormControl('', Validators.required),
+      texto: new FormControl('', Validators.required),
+      imagen: new FormControl('', Validators.required),
+      fecha: new FormControl('', Validators.required),
+      categoria: new FormControl('', Validators.required)
     }
     );
   }
