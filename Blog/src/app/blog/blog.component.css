@@ -7,12 +7,14 @@ h1 {
     color: whitesmoke;
 }
 .inform {
-    background-color: lightgray;
+    background-image: url('https://www.cpacanada.ca/-/media/site/operational/ec-education-certification/images/g10269-ec.jpg');
+    color:white;
 }
 
 .info {
-    font-size: 25px;
+    font-size: 30px;
     font-family: oswald;
+    text-align: center;
 }
 
 .col-3 {
